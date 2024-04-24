@@ -23,7 +23,6 @@ class WeatherDataAggregator
     def calculate_average_temperature(city, hours)
         hourly_temperatures = []
     
-        
         response = self.class.get("/forecast?q=#{city}&APPID=#{@api_key}&units=metric")
         
         if response.code == 200
